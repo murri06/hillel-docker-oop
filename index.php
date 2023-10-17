@@ -2,9 +2,10 @@
 
 require_once 'Calculator.php';
 
-$calc = new Calculator();
+$calc1 = new Calculator(7.5, 2);
+$calc2 = new Calculator( 10, 2.5);
 
-echo "Додавання чисел 1 та 2.6: " . $calc->sumNumbers(1, 2.6) . PHP_EOL;
-echo "Віднімання чисел 5 та 3.1: " . $calc->substractNumbers(5, 3.1) . PHP_EOL;
-echo "Множення чисел 5 та 2: " . $calc->multiplyNumbers(5, 2) . PHP_EOL;
-echo "Ділення чисел 10 та 2.5: " . $calc->divideNumbers(10, 2.5) . PHP_EOL;
+echo "Додавання чисел 7.5 та 2: " . $calc1->sumNumbers() . PHP_EOL;
+echo "Віднімання чисел 10 та 2.5: " . $calc2->subtractNumbers() . PHP_EOL;
+echo "Множення чисел 7.5 та 2: " . $calc1->multiplyNumbers() . PHP_EOL;
+echo "Ділення чисел 10 та 2.5: " . $calc2->divideNumbers() . PHP_EOL;

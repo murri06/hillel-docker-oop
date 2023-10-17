@@ -2,23 +2,32 @@
 
 class Calculator
 {
-    public function sumNumbers(float $A, float $B): float
+    private float $a;
+    private float $b;
+
+    public function __construct(float $a, float $b)
     {
-        return $A + $B;
+        $this->a = $a;
+        $this->b = $b;
     }
 
-    public function substractNumbers(float $A, float $B): float
+    public function sumNumbers(): float
     {
-        return $A - $B;
+        return $this->a + $this->b;
     }
 
-    public function multiplyNumbers(float $A, float $B): float
+    public function subtractNumbers(): float
     {
-        return $A * $B;
+        return $this->a - $this->b;
     }
 
-    public function divideNumbers(float $A, float $B): float
+    public function multiplyNumbers(): float
     {
-        return $A / $B;
+        return $this->a * $this->b;
+    }
+
+    public function divideNumbers(): float
+    {
+        return $this->a / $this->b;
     }
 }
