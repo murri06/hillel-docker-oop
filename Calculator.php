@@ -2,13 +2,8 @@
 
 class Calculator
 {
-    private float $a;
-    private float $b;
-
-    public function __construct(float $a, float $b)
+    public function __construct(private float $a, private float $b)
     {
-        $this->a = $a;
-        $this->b = $b;
     }
 
     public function sumNumbers(): float
@@ -26,8 +21,11 @@ class Calculator
         return $this->a * $this->b;
     }
 
-    public function divideNumbers(): float
+    public function divideNumbers(): float|string
     {
-        return $this->a / $this->b;
+        if ($this->b != 0) {
+            return $this->a / $this->b;
+        }
+        return "Помилка: ділення на нуль";
     }
 }
